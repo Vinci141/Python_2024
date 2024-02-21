@@ -36,3 +36,15 @@ for i, method in enumerate(methods, start=1):
     time_taken = timeit.default_timer() - start_time
     print(f'Method {i}:', d)
     print(f'Time Taken by Method {i}:', time_taken)
+
+**************************************************************
+OUTPUT OF ABOVE CODE 
+
+Method 1: {'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5, 'f': 6}
+Time Taken by Method 1: 1.600012183189392e-06
+Method 2: {'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5, 'f': 6}
+Time Taken by Method 2: 2.199900336563587e-06
+Method 3: {'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5, 'f': 6}
+Time Taken by Method 3: 1.700012944638729e-06
+Method 4: {'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5, 'f': 6}
+Time Taken by Method 4: 2.900022082030773e-06
