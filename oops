@@ -1,0 +1,88 @@
+"""
+understanding class and objects in OOPS for beginners
+"""
+
+class Student:
+    def __init__(self, name, roll_num, marks):
+        self.studentName = name
+        self.roll_number = roll_num
+        self.studentMarks = marks
+
+    def result(self):
+        if self.studentMarks >= 60:
+            return 'Pass'
+        else:
+            return 'Fail'
+
+    def print_details(self):
+        print(f'\nName:{self.studentName}')
+        print(f'Roll Num:{self.roll_number}')
+        print(f'Marks:{self.studentMarks}')
+
+
+print('###   During execution of above code, \'self\' is replaced by object name that we have created. In this case, '
+      'self is replaced with student1   ###')
+
+s1 = Student('vinil', 12345, 98)
+s2 = Student('mehta', 12344, 10)
+s3 = Student('V', 12345, 30)
+s4 = Student('M', 12346, 74)
+s1.print_details()
+s2.print_details()
+s3.print_details()
+s4.print_details()
+'''
+below code is not for beginners
+'''
+student_object = [s1, s2, s3, s4]
+passStudent = []
+failStudent = []
+student_result = {}
+
+for x in student_object:
+    if x.result() == 'Pass':
+        passStudent.append(x.studentName)
+        student_result['Pass student'] = passStudent
+    else:
+        failStudent.append(x.studentName)
+        student_result['Fail student'] = failStudent
+
+print('\nFinal Result:', student_result)
+
+
+class Product:
+    def __init__(self, product_name, brand_name, model_name, price, year_of_mfg):
+        """This is a constructor for the Product class."""
+        self.productName = product_name
+        self.brandName = brand_name
+        self.modelName = model_name
+        self.productPrice = price
+        self.yearOfMfg = year_of_mfg
+
+    def print_data(self):
+        """This method prints the details of the product."""
+        print(f'\nName: {self.productName}')
+        print(f'Brand:{self.brandName}')
+        print(f'Model: {self.modelName}')
+        print(f'Price(in INR):{self.productPrice}')
+        print(f'Year of Manufacturing:{self.yearOfMfg}')
+
+
+ac = Product("AC", 'LG', '1500W', 45000, 2024)
+# print("Name:", ac.productName)
+# print("Brand:", ac.brandName)
+# print("Model:", ac.modelName)
+# print("Price(in INR):", ac.productPrice)
+# print("Year of Manufacturing:", ac.yearOfMfg)
+# # using method, we can avoid these many print statements
+
+samsung_mobile = Product("MOBILE", 'Samsung', 'S24', 66000, 2023)
+# print("\nName:", samsung_mobile.productName)
+# print("Brand:", samsung_mobile.brandName)
+# print("Model:", samsung_mobile.modelName)
+# print("Price(in INR):", samsung_mobile.productPrice)
+# print("Year of Manufacturing:", samsung_mobile.yearOfMfg)
+# using method, we can avoid these many print statements
+
+# ac.print_data()
+# samsung_mobile.print_data()
