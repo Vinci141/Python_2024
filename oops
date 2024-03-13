@@ -48,8 +48,7 @@ for x in student_object:
         student_result['Fail student'] = failStudent
 
 print('\nFinal Result:', student_result)
-
-
+# ---------------------------------------------------------------
 class Product:
     def __init__(self, product_name, brand_name, model_name, price, year_of_mfg):
         """This is a constructor for the Product class."""
@@ -86,3 +85,23 @@ samsung_mobile = Product("MOBILE", 'Samsung', 'S24', 66000, 2023)
 
 # ac.print_data()
 # samsung_mobile.print_data()
+# ---------------------------------------------------------------
+
+class MyProduct():
+    def __init__(self, product_name, price):
+        self.product_name = product_name
+        self.price = price
+
+    def discount(self, discount_percent):
+        discount_amount = (self.price / 100) * discount_percent
+        final_amount = self.price - discount_amount
+        return final_amount
+
+    def print_value(self, discount_percent):
+        final_price = self.discount(discount_percent)
+        print(f'Product type: {self.product_name}, \nProduct cost: {self.price},\nProduct value after discount: {final_price}')
+
+# Usage
+laptop = MyProduct('Dell', 1000)
+laptop.print_value(10)
+
